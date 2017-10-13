@@ -38,4 +38,4 @@ exec { 'SCP the config':
 }
 
 
-
+If the servers were running on AWS, then we can deploy this on required servers on the AWS Dashboard as well.
