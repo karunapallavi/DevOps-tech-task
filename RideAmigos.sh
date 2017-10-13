@@ -1,10 +1,6 @@
 #!/bin/bash
 #bash for tech exercise
 
-#declaring the current user as sudo
-sudo tee /etc/sudoers.d/$USER <<END
-END
-
 # second bash script to run property database on the servers
 $script_path ="add path here" 
 
@@ -19,10 +15,4 @@ if [ -s file3] then
 	("$script_path")
 fi
 
-
-
-
-#removing the sudo access from the current user
-sudo /bin/rm /etc/sudoers.d/$USER
-sudo -k
 
