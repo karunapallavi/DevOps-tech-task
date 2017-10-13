@@ -6,6 +6,9 @@ They are also sorted so we know which ones were most recent
 
 If logs were written to file3, meaning there were false positives, we need to run the property database on required servers
 
+This would also create a problem - file3 would be populated from previous if this were to run a second time.
+Therefore, either the file should be removed after viewing it or we must generate a new file everyday.
+
 
 The second file script.sh runs the command sudo rkhunter --propupd
 sudoers file is edited from the script so that the user doesnt have to manually input the password
@@ -31,3 +34,6 @@ exec { 'SCP the config':
   cwd      => '/path/to',
   user     => 'root',
 }
+
+
+
