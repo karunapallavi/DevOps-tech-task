@@ -15,7 +15,7 @@ grep -xf file1 file2 > file3 | grep --color "file1" | sort
 
 
 #if file3 ie the logs are populated, then run the second script to runt he property database on required servers
-if [!file3] then
+if [ -s file3] then
 	("$script_path")
 fi
 
