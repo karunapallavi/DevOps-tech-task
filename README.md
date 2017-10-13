@@ -13,6 +13,8 @@ Therefore, either the file should be removed after viewing it or we must generat
 The second file script.sh runs the command sudo rkhunter --propupd
 sudoers file is edited from the script so that the user doesnt have to manually input the password
 
+This may not be the most secure way to perfoorm this task - meaning that if this file were tampered with, it has sudo access and therefore would be dangerous loophole vulnerable to attacks.
+
 
 With more time, I would develop a way to check the affected servers - probably with puppet which would look something like this:
 file { '/path/to/script.sh':
